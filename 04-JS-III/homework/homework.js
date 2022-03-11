@@ -310,20 +310,36 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var n = 0
-  var arry =[]
+  
+  var arry = []
   var suma = numero
-  do {
-    n+=1
-    suma +=  2
-    arry.push(suma)
-    if (suma === n) {
-      return "Se interrumpió la ejecución"
-    }  
-  }while (n <= 10);
+  
+  for (var i = 0; i < 10; i++) {
+    suma += 2
+    if (suma === i) break
+    else{
+      arry.push(suma)
+    }
+  }
+  if(i<10){
+    return "Se interrumpió la ejecución"
+  } else {
+    return arry
+  }
 
+//  do {
+ //   n+=1
+   // suma += numero+2
+
+    
+   
+    //if (suma === n)break; {
+      //return "Se interrumpió la ejecución"
+   // }  
+  //}while (n = 10);
+  
 }
-breakStatement(1)
+breakStatement(3)
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -332,21 +348,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-  var n = 0
-  var arry =[]
-  var suma = numero
-  while (n <= 10) {
-    if (n === 3) {
-      continue;
-    }
-    n+=1
-    suma +=  2
-    arry.push(suma)
-  }
-  console.log(arry)
+  suma = numero;
+  var ary = [];
+  for (let i = 0; i < 10; i++) {
+    if (i===5)continue;
+    suma+=2
+    ary.push(suma)
+    
+   
+  }return ary
 }
-continueStatement(0)
-
 // No modificar nada debajo de esta línea
 // --------------------------------
 
