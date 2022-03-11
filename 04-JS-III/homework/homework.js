@@ -319,12 +319,8 @@ function breakStatement(numero) {
     arry.push(suma)
     if (suma === n) {
       return "Se interrumpió la ejecución"
-    }
-      
-    
-   
-    
-  } while (n <= 10);
+    }  
+  }while (n <= 10);
 
 }
 breakStatement(1)
@@ -339,20 +335,17 @@ function continueStatement(numero) {
   var n = 0
   var arry =[]
   var suma = numero
-  do {
-    if (n === 5) continue;
+  while (n <= 10) {
+    if (n === 3) {
+      continue;
+    }
     n+=1
     suma +=  2
     arry.push(suma)
-   
-     
-      
-    
-   
-    
-  } while (n <= 10);
+  }
+  console.log(arry)
 }
-continueStatement(2)
+continueStatement(0)
 
 // No modificar nada debajo de esta línea
 // --------------------------------
